@@ -1,33 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="grid grid-cols-4 gap-4, m-2 p-3 bg-gray-50">
+        <h1 className="text-3xl font-semibold text-cyan-500 text-center">
+          this is a heading
+        </h1>
+        <div className="card w-96 glass">
+          <figure><img src="https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/d9245a6cf_50507.jpg" alt="car!" /></figure>
+          <div className="card-body">
+            <h2 className="card-title">Life hack</h2>
+            <p>How to park your car at your garage?</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Learn now!</button>
+            </div>
+          </div>
+        </div>
+        <div className="card card-side bg-base-100 shadow-xl glass mb-5">
+          <figure><img src="https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/d9245a6cf_50507.jpg" alt="Movie" /></figure>
+          <div className="card-body">
+            <h2 className="card-title text-white">New movie is released!</h2>
+            <p>Click the button to watch on Jetflix app.</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Watch</button>
+            </div>
+          </div>
+        </div>
+        <h1>this is another test</h1>
+        <div className="card card-side bg-white shadow-xl hover:scale-105 hover:duration-500">
+          <figure><img src="https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/d9245a6cf_50507.jpg" alt="Movie" /></figure>
+          <div className="card-body">
+            <h2 className="card-title">New movie is released!</h2>
+            <p>Click the button to watch on Jetflix app.</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Watch</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
