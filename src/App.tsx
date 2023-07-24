@@ -28,13 +28,16 @@ function App() {
           </div>
         </div>
         <h1>this is another test</h1>
-        <div className="card card-side bg-white shadow-xl hover:scale-105 hover:duration-500">
+        <div className="card card-side bg-white shadow-xl hover:scale-105 hover:duration-500 rounded-lg">
           <figure><img src="https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/d9245a6cf_50507.jpg" alt="Movie" /></figure>
           <div className="card-body">
-            <h2 className="card-title">New movie is released!</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <h2 className="card-title">Chakrabak</h2>
+            <p>Id: B-1002</p>
+            <p>Author: Kai Najrul Islam</p>
+            <p>Genre: Novel</p>
+            <p>Price: 1234</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <button className="btn btn-primary rounded-md">Watch</button>
             </div>
           </div>
         </div>
