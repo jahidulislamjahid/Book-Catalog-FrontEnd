@@ -18,7 +18,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }: { email: string; password: string }) => {
     try {
       const response = await fetch(
-        "https://book-catalog-application-server-seven.vercel.app/api/v1/auth/login",
+        "https://book-catalog-api-kappa.vercel.app/api/v1/auth/login",
         {
           method: "POST",
           body: JSON.stringify({ email, password }),
@@ -52,7 +52,7 @@ export const createUser = createAsyncThunk(
   }) => {
     try {
       const response = await fetch(
-        "https://book-catalog-application-server-seven.vercel.app/api/v1/user/create-user",
+        "https://book-catalog-api-kappa.vercel.app/api/v1/user/create-user",
         {
           method: "POST",
           body: JSON.stringify({ email, password, firstName, lastName }),
