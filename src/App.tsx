@@ -1,3 +1,4 @@
+import { CartIcon, Delete, MinusIcon, PlusIcon, RightAngle } from "./assets/Icons"
 
 function App() {
 
@@ -36,6 +37,11 @@ function App() {
             <p>Author: Kai Najrul Islam</p>
             <p>Genre: Novel</p>
             <p>Price: 1234</p>
+            <p className=""><Delete></Delete></p>
+            <p className=""><RightAngle></RightAngle></p>
+            <p className=""><PlusIcon></PlusIcon></p>
+            <p className=""><MinusIcon></MinusIcon></p>
+            <p className=""><CartIcon></CartIcon></p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary rounded-md">Watch</button>
             </div>
