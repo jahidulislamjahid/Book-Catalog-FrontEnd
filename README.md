@@ -1,5 +1,5 @@
 
-# Foobar
+# Book Box 🕮 
 
 Welcome to the Book Catalog Frontend app 🕮
 
