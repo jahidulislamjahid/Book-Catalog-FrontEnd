@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
-import Lottie from "lottie-react";
 import { ReactNode } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-// import signup from "../../assets/animation/addNewBook.json";
-// import { Button } from "../../components/Button";
 import { usePostBookMutation } from "../../redux/features/books/bookApi";
+import { AddBook } from "../../assets/Icons";
 const AddNewBook = () => {
   const {
     register,
@@ -62,16 +60,16 @@ const AddNewBook = () => {
   };
 
   return (
-    <div className="main-container px-20 py-16 md:hero min-h-screen   justify-items-center">
+    <div className="main-container px-20 py-16 md:hero min-h-screen bg-base-200">
       <div className="hero min-h-screen bg-base-200 ">
-        <div className="hero-content flex-col lg:flex-row-reverse  ">
+        <div className="hero-content flex-col lg:flex-row-reverse gap-10">
           <div className="text-center ">
             <h1 className="text-5xl font-bold">
-              Add Your <span className="text-blue-500">Favorite Book</span>{" "}
+              Add Your <span className="text-curiousCyan">Favorite Book</span>{" "}
             </h1>
 
             <div className="w-1/8 mb-10 md:mb-0 mx-auto">
-              {/* <Lottie animationData={signup} loop={true} /> */}
+              <AddBook />
             </div>
           </div>
 
@@ -81,7 +79,6 @@ const AddNewBook = () => {
           >
             <div className="card flex-shrink-0  w-full max-w-screen-md shadow-2xl ">
               <div className="card-body">
-                {/* Title */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text"> Title: </span>
@@ -97,7 +94,6 @@ const AddNewBook = () => {
                     <small className="text-red-600">Title is required!</small>
                   )}
                 </div>
-                {/* Author */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Author:</span>
@@ -114,7 +110,6 @@ const AddNewBook = () => {
                   )}
                 </div>
 
-                {/* Genre */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Genre:</span>
@@ -143,7 +138,6 @@ const AddNewBook = () => {
                   )}
                 </div>
 
-                {/* Published Date */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Published Date:</span>
@@ -162,7 +156,6 @@ const AddNewBook = () => {
                   )}
                 </div>
 
-                {/* Year */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Year:</span>
@@ -191,7 +184,6 @@ const AddNewBook = () => {
                   )}
                 </div>
 
-                {/* Price */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Price:</span>
@@ -218,7 +210,6 @@ const AddNewBook = () => {
                   )}
                 </div>
 
-                {/* Book Description */}
 
                 <div className="form-control">
                   <label className="label">
@@ -241,13 +232,8 @@ const AddNewBook = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                  {/* <button className="btn font-bold btn-primary">
-                    Add Book
-                  </button> */}
                   <button
-                    // variant="default"
-                    className="btn-outline btn-sm mx-2 w-full"
-                  // className="w-full"
+                    className="btn bg-curiousCyan hover:bg-gray-900 text-white rounded-md mx-2 w-full"
                   >
                     Add Book
                   </button>

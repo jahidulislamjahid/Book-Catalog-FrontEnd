@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { options } from "../../components/BookOptions";
-// import { Button } from "../../components/Button";
 
 const BookFilter = ({
   setSelectedGenre,
@@ -15,7 +14,7 @@ const BookFilter = ({
   return (
     <div className="p-5">
       <div>
-        <h1 className="text-2xl uppercase">Price Range</h1>
+        <h1 className="text-2xl uppercase text-curiousCyan my-3">Price Range</h1>
         <input
           type="range"
           defaultValue={50}
@@ -23,9 +22,9 @@ const BookFilter = ({
           min={0}
           step={1}
           onChange={handleRangeChange}
-          className="range range-info"
+          className="range range-secondary"
         />
-        <h1 className="font-bold mb-2 text-red-500 ">From 0$ To {value}$</h1>
+        <h1 className="font-bold mb-2 text-gray-700 ">From 0$ To {value}$</h1>
       </div>
 
       <input
@@ -73,7 +72,7 @@ const BookFilter = ({
         to="/add-new-book"
       >
         <button
-          className="hover:text-black btn btn-primary mt-5 hover:bg-transparent w-full"
+          className="btn bg-curiousCyan hover:bg-gray-900 text-white rounded-md w-full my-5"
         >
           Add New Books
         </button>

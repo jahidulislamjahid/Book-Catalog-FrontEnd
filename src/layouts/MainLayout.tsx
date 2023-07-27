@@ -5,7 +5,7 @@ export default function MainLayout() {
   return (
     <>
       <Navbar />
-      <div className="max-w-screen-2xl   mx-auto w-full">
+      <div className="  mx-auto w-full">
         <Outlet />
       </div>
     </>

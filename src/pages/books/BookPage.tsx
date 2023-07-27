@@ -6,7 +6,6 @@ import { setPriceRange } from "../../redux/features/books/bookSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { IBook } from "../../types/bookTypes";
 import Footer from "../shared/Footer";
-// import Loading from "../shared/Loading";
 import BookFilter from "./BookFilter";
 
 const BookPage = () => {

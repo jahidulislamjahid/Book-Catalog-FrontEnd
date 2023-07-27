@@ -35,9 +35,10 @@ const BooksCategory = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <Button className="btn-outline btn-sm mx-2">
+        <button className="btn btn-outline bg-curiousCyan text-white font-semibold text-center rounded-md"
+        >
           <Link to="/books">See All Books</Link>
-        </Button>
+        </button>
       </div>
     </div>
   );

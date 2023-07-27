@@ -1,28 +1,24 @@
 import { Link } from "react-router-dom";
 
 import NavBar from "./Navbar";
+import { Notfound } from "../../assets/Icons";
 
-// import img404 from "../../assets/home/404.png";
 
 const NotFound = () => {
   return (
     <>
       <NavBar></NavBar>
-      <div className="flex items-center justify-center min-h-screen bg-gray-500">
-        <div className="card w-96 glass mt-10">
+      <div className="flex items-center justify-center min-h-screen bg-base-200">
+        <div className="">
           <figure>
-            {<NotFound />}
-            {/* <img src={img404} alt="car!" /> */}
+            <Notfound />
           </figure>
-          <div className="card-body items-center justify-center">
-            <h2 className="card-title text-red-700 font-bold ">
-              404! Not Found
-            </h2>
+          <div className="items-center justify-center">
 
-            <div className="card-actions justify-end">
+            <div className="card-actions justify-center mt-5">
               <Link to="/">
                 {" "}
-                <button className="btn btn-primary">Back to Home</button>
+                <button className="btn bg-curiousCyan text-white font-semibold hover:bg-gray-900 rounded-md">Back to Home</button>
               </Link>
             </div>
           </div>

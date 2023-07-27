@@ -6,14 +6,11 @@ import { FieldValues, SubmitHandler } from "react-hook-form";
 
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
-// import Lottie from "lottie-react";
-
 import { ReactNode } from "react";
 import { toast } from "react-hot-toast";
-// import login from "../../assets/animation/animation_lk8rulty.json";
 import { loginUser } from "../../redux/features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { LoginSvg } from "../../assets/Icons";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -56,12 +53,12 @@ const Login = () => {
     <div className="main-container  p-4 py-20 md:hero min-h-screen   justify-items-center">
       <div className="hero hero-content flex-col lg:flex-row-reverse">
         <div className=" text-center">
-          <h1 className="text-4xl font-bold ml-20">
-            Login <span className="text-blue-500">Here !</span>{" "}
+          <h1 className="text-4xl font-bold ml-20 mb-5">
+            Login <span className="text-curiousCyan">Here !</span>{" "}
           </h1>
 
           <div className="w-1/8 mb-10 md:mb-0 mx-auto ml-20">
-            {/* <Lottie animationData={login} loop={true} /> */}
+            <LoginSvg />
           </div>
         </div>
 
@@ -116,17 +113,17 @@ const Login = () => {
               <label className="label">
                 <Link
                   to="/forgot-password"
-                  className="label-text-alt text-blue-500 "
+                  className="label-text-alt text-curiousCyan "
                 >
                   Forgot password?
                 </Link>
               </label>
 
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn bg-curiousCyan rounded-md text-white font-semibold hover:bg-gray-900">Login</button>
                 <p className="text-sm font-bold mt-4">
                   Don't Have Any Account ?{" "}
-                  <Link to="/signup" className="text-blue-500 ">
+                  <Link to="/signup" className="text-curiousCyan ">
                     Register
                   </Link>{" "}
                 </p>

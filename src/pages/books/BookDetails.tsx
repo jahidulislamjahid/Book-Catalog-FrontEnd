@@ -3,7 +3,6 @@
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
-// import defaultBook from "../../assets/defaultbook.jpg";
 import {
   usePostReviewMutation,
   useSingleBookQuery,
@@ -14,7 +13,6 @@ import { IBook } from "../../types/bookTypes";
 
 import { useCreateWishListMutation } from "../../redux/features/wishlist/wishlistApi";
 import Footer from "../shared/Footer";
-// import Loading from "../shared/Loading";
 import NotFound from "../shared/NotFound";
 
 const defaultBookRating = 4.5;
@@ -63,9 +61,8 @@ const BookDetails = () => {
     return (
       <div>
         <span className="loading loading-ball loading-lg text-rose-500"></span>
-
       </div>
-    );
+    )
   }
   if (book?.data[0] === undefined) {
     return <NotFound />;
@@ -81,7 +78,6 @@ const BookDetails = () => {
       };
 
       await createWishList(options).unwrap();
-      // const result = await createWishList(options).unwrap();
 
       toast.success("Book is Added to Wishlist Successfully!");
     } catch (error) {
@@ -90,11 +86,11 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-base-200">
       <div className="hero px-10 py-24  min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img
-            src={bookData?.bookImage || defaultBook}
+            src={bookData?.bookImage}
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
@@ -134,29 +130,23 @@ const BookDetails = () => {
               <>
                 <button
                   onClick={() => handleWishList(book)}
-                  className="btn btn-outline btn-defult btn-sm mx-2  "
+                  className="btn bg-curiousCyan rounded-md text-white font-semibold hover:bg-gray-900 btn-sm mx-2 "
                 >
                   Add to WishList
                 </button>
 
                 <button
                   onClick={() => handleAddBook(bookData)}
-                  className="btn btn-outline btn-primary btn-sm mx-2"
+                  className="btn bg-curiousCyan rounded-md text-white font-semibold hover:bg-gray-900 btn-sm mx-2"
                 >
                   Add to Cart
                 </button>
-                {/* <Button
-                  onClick={() => handleAddBook(bookData)}
-                  className="btn-outline btn-sm mx-2  "
-                >
-                  ADD TO CART
-                </Button> */}
               </>
             )}
 
             {loggedInEmail === bookData?.addedBy && (
               <Link to={`/edit-book/${id}`}>
-                <button className="btn ml-2 btn-outline btn-sm">
+                <button className="btn ml-2 bg-curiousCyan rounded-md btn-sm">
                   Edit this Book
                 </button>
               </Link>
@@ -164,49 +154,49 @@ const BookDetails = () => {
 
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-            <small className=" text-xs text-blue-700 font-semibold ">
+            <small className=" text-xs text-black font-semibold ">
               This Book is Added By : {bookData?.addedBy}
             </small>
           </div>
         </div>
       </div>
 
+
+      <div className="w-25 flex gap-5 justify-center">
+        {reviewData &&
+          reviewData
+            .slice()
+            .reverse()
+            .map((item: any) => (
+              <div className="card w-96 h-32 mb-5 bg-white shadow-xl">
+                <div className="card-body">
+                  <h2 className="text-cyan-500 font-bold">
+                    <small className="text-md">Reviewed By:</small>
+                    {item?.writtenBy}
+                  </h2>
+                  <p className="text-sm text-gray-600 font-semibold">{item.title}</p>
+                  <p className="text-xs font-bold text-gray-400">
+                    {item.date}
+                  </p>
+                </div>
+              </div>
+            ))}
+      </div>
+
       {loggedInEmail && (
         <div className="flex mb-5  ">
-          <div className="w-25 ">
-            {reviewData &&
-              reviewData
-                .slice()
-                .reverse()
-                .map((item: any) => (
-                  <div className="card w-96 h-32 mb-5 bg-base-300 shadow-xl">
-                    <div className="card-body">
-                      <h2 className="text-cyan-500 font-bold">
-                        <small className="text-xs">Reviewed By:</small>
-                        {item?.writtenBy}
-                      </h2>
-                      <p className="text-sm text-gray-900">{item.title}</p>
-                      <p className="text-xs font-bold text-red-800">
-                        {item.date}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-          </div>
-
           <div className="w-full flex  items-start  justify-end">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="md:hero font-bold mt-5 ml-16"
             >
-              <div className="card flex-shrink-0 w-full  max-w-screen-sm shadow-2xl ">
+              <div className="card flex-shrink-0 w-full  max-w-screen-sm shadow-2xl bg-white ">
                 <div className="card-body">
-                  {/* Book Review */}
 
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">
-                        Add Review For that Book
+                        Add Review For The Book
                       </span>
                     </label>
                     <textarea
@@ -224,7 +214,7 @@ const BookDetails = () => {
                   </div>
 
                   <div className="form-control mt-6">
-                    <button className="btn font-bold btn-primary">
+                    <button className="btn font-bold bg-curiousCyan text-white rounded-md hover:bg-gray-900">
                       Add Review
                     </button>
                   </div>

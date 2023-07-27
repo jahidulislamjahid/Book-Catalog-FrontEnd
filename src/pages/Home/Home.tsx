@@ -4,7 +4,6 @@ import BooksCategory from "./BookCategory";
 const Home = () => {
   return (
     <div>
-      <Bannerr />
       <BooksCategory />
       <Footer />
     </div>

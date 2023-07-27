@@ -34,16 +34,16 @@ const CartSideMenu = ({ onClose }: any) => {
   };
 
   return (
-    <div className="p-2 shadow-xl">
-      <button onClick={handleClose} className="text-xl btn-outline">
+    <div className="p-2 shadow-xl z-50">
+      <button onClick={handleClose} className="text-xl btn btn-ghost btn-circle">
         <RightAngle />
       </button>
-      <h2 className="text-red-500 text-sm">Total Items: {totalQuantity()}</h2>
+      <h2 className="text-black font-semibold text-sm">Total Items: {totalQuantity()}</h2>
       <div className=" mt-4 gap-5">
         <h1 className="font-bold text-cyan-700">Total: {total?.toFixed(2)}</h1>
         {cartData &&
           cartData?.map((cart: IBook) => (
-            <div key={cart._id} className="border-b-2 border-sky-500 p-5">
+            <div key={cart._id} className="border-b-2 border-sky-500 p-5 ">
               <div className="border-r pr-20 shrink-0">
                 <img src={cart?.bookImage} alt="" className="h-full" />
               </div>
@@ -55,21 +55,21 @@ const CartSideMenu = ({ onClose }: any) => {
               <p>Quantity: {cart.quantity}</p>
               <button
                 onClick={() => dispatch(addToCart(cart))}
-                className="text-2xl btn-outline mr-5"
+                className="text-xl btn btn-circle btn-ghost mr-2"
               >
                 <PlusIcon />
               </button>
 
               <button
                 onClick={() => dispatch(removeOne(cart))}
-                className="text-2xl btn-outline ml-5"
+                className="text-xl btn btn-circle btn-ghost ml-2"
               >
                 <MinusIcon />
               </button>
 
               <button
                 onClick={() => handleRemoveBookFromCart(cart)}
-                className="text-2xl btn-outline ml-10"
+                className="text-xl btn btn-circle btn-ghost ml-2"
               >
                 <Delete />
               </button>

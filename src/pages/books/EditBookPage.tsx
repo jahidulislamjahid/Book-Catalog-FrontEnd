@@ -4,7 +4,6 @@
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
-// import defaultBook from "../../assets/defaultbook.jpg";
 import {
   useDeleteBookMutation,
   useEditBookMutation,
@@ -14,7 +13,6 @@ import {
 import { ReactNode, useEffect } from "react";
 import Swal from "sweetalert2";
 import Footer from "../shared/Footer";
-// import Loading from "../shared/Loading";
 import NotFound from "../shared/NotFound";
 
 const EditBookPage = () => {
@@ -120,7 +118,6 @@ const EditBookPage = () => {
               <div className="  ">
                 <p className="text-cyan-500  ">Edit Book </p>
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-                {/* Title */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text"> Title: </span>
@@ -136,7 +133,6 @@ const EditBookPage = () => {
                     <small className="text-red-600">Title is required!</small>
                   )}
                 </div>
-                {/* Author */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Author:</span>
@@ -153,7 +149,6 @@ const EditBookPage = () => {
                   )}
                 </div>
 
-                {/* Genre */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Genre:</span>
@@ -170,7 +165,6 @@ const EditBookPage = () => {
                   )}
                 </div>
 
-                {/* Published Date */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Published Date:</span>
@@ -189,7 +183,6 @@ const EditBookPage = () => {
                   )}
                 </div>
 
-                {/* Year */}
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Year:</span>
@@ -218,7 +211,6 @@ const EditBookPage = () => {
                   )}
                 </div>
 
-                {/* Book Description */}
 
                 <div className="form-control">
                   <label className="label">

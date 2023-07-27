@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
-// import Lottie from "lottie-react";
 import { useEffect } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-// import signup from "../../assets/animation/animation_lk8s3dwe.json";
 import { createUser } from "../../redux/features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { LoginSvg } from "../../assets/Icons";
 
 const SignUp = () => {
   const {
@@ -58,12 +57,12 @@ const SignUp = () => {
     <div className="main-container px-20 py-16 md:hero min-h-screen   justify-items-center">
       <div className="hero-content flex-col lg:flex-row-reverse  ">
         <div className="text-center ">
-          <h1 className="text-5xl font-bold">
-            SignUp <span className="text-blue-500">Now!</span>{" "}
+          <h1 className="text-5xl font-bold mb-5">
+            SignUp <span className="text-curiousCyan">Now!</span>{" "}
           </h1>
 
           <div className="w-1/8 mb-10 md:mb-0 mx-auto">
-            {/* <Lottie animationData={signup} loop={true} /> */}
+            <LoginSvg />
           </div>
         </div>
 
@@ -161,10 +160,10 @@ const SignUp = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn font-bold btn-primary">Register</button>
+                <button className="btn bg-curiousCyan text-white font-semibold rounded-md hover:bg-gray-900">Register</button>
                 <p className="text-sm font-bold mt-4">
                   Already Have An Account?{" "}
-                  <Link to="/login" className="text-blue-500 ">
+                  <Link to="/login" className="text-curiousCyan ">
                     Login
                   </Link>{" "}
                 </p>
